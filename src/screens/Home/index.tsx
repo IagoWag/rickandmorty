@@ -6,6 +6,7 @@ import Icon from '../../components/Icon';
 import Separator from '../../components/Separator';
 import Text from '../../components/Text';
 import Row from '../../components/Row';
+import RowBetween from '../../components/RowBetween';
 import {Container, HeaderImage} from './styles';
 
 const Home: React.FC = () => {
@@ -24,11 +25,11 @@ const Home: React.FC = () => {
             <Text isBold size={14}>
                 SDAS
             </Text>
-            <Row>
+            <RowBetween>
                 <Text>dsadasd</Text>
                 <Separator width={10} />
                 <Text>dsdsadasdasdasdaasd</Text>
-            </Row>
+            </RowBetween>
         </Container>
     );
 };
