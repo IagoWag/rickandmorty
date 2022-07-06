@@ -8,6 +8,8 @@ import Text from '../../components/Text';
 import Row from '../../components/Row';
 import RowBetween from '../../components/RowBetween';
 import {Container, HeaderImage, OptionButton} from './styles';
+import CharacterCard from '../../components/CharacterCard';
+import {mockedData as item} from './mock';
 
 const filterOptions = [
     {
@@ -62,6 +64,9 @@ const Home: React.FC = () => {
                     );
                 })}
             </Row>
+            <Separator height={20} />
+
+            <CharacterCard onPress={() => {}} item={item} />
         </Container>
     );
 };
