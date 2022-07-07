@@ -1,3 +1,5 @@
 import search from '../assets/icons/search/Vector.png';
-export type NameIconTypes = 'search';
-export default {search};
+import chevronRight from '../assets/icons/chevronRight/Vector.png';
+
+export type NameIconTypes = 'search' | 'chevronRight';
+export default {search, chevronRight};
