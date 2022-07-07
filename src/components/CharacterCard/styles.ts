@@ -7,13 +7,14 @@ export const Container = styled.TouchableOpacity`
     border-radius: 20px;
 `;
 export const CharacterImage = styled.Image`
-    width: 150;
-    height: 200;
-    border-top-left-radius: 15;
-    border-bottom-left-radius: 15;
+    width: 150px;
+    height: 200px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 `;
 export const CharacterViewText = styled.View`
     flex: 1;
     padding: 10px;
     justify-content: space-between;
 `;
+export const CharacterText = styled.Text``;

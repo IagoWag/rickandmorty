@@ -13,7 +13,7 @@ const CharacterCard = ({onPress, item, ...rest}: CharacterCardProps) => {
             <CharacterImage source={{uri: item.image}} />
             <CharacterViewText>
                 <View>
-                    <Text isBold style={{fontSize: 20}}>
+                    <Text isBold size={20}>
                         {item.name}
                     </Text>
                     <Text>{item.species}</Text>
