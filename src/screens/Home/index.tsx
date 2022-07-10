@@ -15,33 +15,27 @@ import {Container, HeaderImage, OptionButton} from './styles';
 import CharacterCard from '../../components/CharacterCard';
 import {useNavigation} from '@react-navigation/native';
 import {ResponseItemProps, ResponseProps} from './types';
-import axios from 'axios';
-import api from '../../services/api';
 import {getData} from '../../services/resource/character';
-
-const filterOptions = [
-    {
-        id: 1,
-        label: 'Popular',
-    },
-    {
-        id: 2,
-        label: 'A-Z',
-    },
-    {
-        id: 3,
-        label: 'Last viewed',
-    },
-];
+import {filterOptions} from './mock';
 
 const Home: React.FC = () => {
+    /**
+     * Navigation
+     */
     const {navigate} = useNavigation();
     const handleNavigateToInternal = ({item}: ResponseProps) => {
         navigate('Internal', {item});
     };
+    /**
+     * States
+     */
     const [selectedOption, setSelectedOption] = useState<number>(1);
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState<ResponseItemProps[]>([]);
+
+    /**
+     * Callbacks
+     */
     const handleFechtData = useCallback(async () => {
         try {
             setLoading(true);
@@ -53,6 +47,10 @@ const Home: React.FC = () => {
             setLoading(false);
         }
     }, []);
+
+    /**
+     * Effects
+     */
 
     useEffect(() => {
         handleFechtData();

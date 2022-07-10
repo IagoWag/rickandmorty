@@ -17,6 +17,9 @@ import Row from '../../components/Row';
 import {useNavigation} from '@react-navigation/native';
 
 const Internal = ({route}: any) => {
+    /**
+     * Navigation
+     */
     const {item}: ResponseProps = route.params;
 
     const {goBack} = useNavigation();
@@ -39,9 +42,7 @@ const Internal = ({route}: any) => {
 
             <CharacterInfoConfig>
                 <CharacterHeaderInfo>
-                    <CharacterName isBold size={30}>
-                        {item?.name}
-                    </CharacterName>
+                    <CharacterName>{item?.name}</CharacterName>
                     <Icon icon="share" activeColor="black" />
                 </CharacterHeaderInfo>
 

@@ -22,6 +22,9 @@ export const CharacterHeaderInfo = styled.View`
 
 export const CharacterInfo = styled.View``;
 
-export const CharacterName = styled(Text)`
+export const CharacterName = styled(Text).attrs({
+    isBold: true,
+    size: 30,
+})`
     max-width: 70%;
 `;

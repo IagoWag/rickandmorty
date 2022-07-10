@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import Row from '../../components/Row';
 
 export const Container = styled.View`
     flex: 1;

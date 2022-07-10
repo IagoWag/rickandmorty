@@ -3,5 +3,5 @@ import {ResponseItemProps} from '../../screens/Home/types';
 
 export interface CharacterCardProps extends TouchableOpacityProps {
     onPress: () => void;
-    item: ResponseItemProps;
+    item?: ResponseItemProps;
 }

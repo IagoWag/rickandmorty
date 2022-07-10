@@ -1,30 +1,17 @@
 import React from 'react';
-import {
-    CardStyleInterpolators,
-    createStackNavigator,
-    StackNavigationOptions,
-} from '@react-navigation/stack';
+import {createStackNavigator} from '@react-navigation/stack';
 import Internal from '../screens/Internal';
 import Home from '../screens/Home';
+import useNavigationController from './useNavigationController';
 
 const {Navigator, Screen} = createStackNavigator();
 
-const animatedNavigation: StackNavigationOptions = {
-    gestureDirection: 'horizontal',
-    gestureEnabled: true,
-    headerShown: false,
-    cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-};
-
 const Routes: React.FC = () => {
+    const {animatedNavigation} = useNavigationController();
     return (
         <Navigator screenOptions={animatedNavigation}>
-            <Screen options={{title: 'Home'}} name="Home" component={Home} />
-            <Screen
-                options={{title: 'Internal'}}
-                name="Internal"
-                component={Internal}
-            />
+            <Screen name="Home" component={Home} />
+            <Screen name="Internal" component={Internal} />
         </Navigator>
     );
 };
