@@ -10,13 +10,13 @@ import {CharacterCardProps} from './types';
 const CharacterCard = ({onPress, item, ...rest}: CharacterCardProps) => {
     return (
         <Container {...rest} onPress={onPress}>
-            <CharacterImage source={{uri: item.image}} />
+            <CharacterImage source={{uri: item?.image}} />
             <CharacterViewText>
                 <View>
                     <Text isBold size={20}>
-                        {item.name}
+                        {item?.name}
                     </Text>
-                    <Text>{item.species}</Text>
+                    <Text>{item?.species}</Text>
                     <Separator height={10} />
                     <Text>
                         Lorem, ipsum dolor sit amet consectetur adipisicing

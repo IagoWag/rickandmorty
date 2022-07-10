@@ -1,10 +1,14 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import {View, Text} from 'react-native';
-import Home from './screens/Home';
-
-// import { Container } from './styles';
+import {NavigationContainer} from '@react-navigation/native';
+import Routes from './navigation';
 
 const App: React.FC = () => {
-    return <Home />;
+    return (
+        <NavigationContainer>
+            <Routes />
+        </NavigationContainer>
+    );
 };
+
 export default App;

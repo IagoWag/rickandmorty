@@ -70,3 +70,18 @@ export const mockedData = {
     url: 'https://rickandmortyapi.com/api/character/1',
     created: '2017-11-04T18:48:46.250Z',
 };
+
+export const filterOptions = [
+    {
+        id: 1,
+        label: 'Popular',
+    },
+    {
+        id: 2,
+        label: 'A-Z',
+    },
+    {
+        id: 3,
+        label: 'Last viewed',
+    },
+];
